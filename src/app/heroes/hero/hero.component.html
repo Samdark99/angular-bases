@@ -1,0 +1,39 @@
+<h1>{{name}}</h1>
+
+<!-- Esto es un description list -->
+<dl>
+  <!-- Esto es un table description -->
+  <td>Nombre:</td>
+  <!-- Esto es un description details -->
+  <dd>{{name}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{age}}</dd>
+
+  <td>Método:</td>
+  <dd>{{getHeroDescription()}}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{capitalizedName}}</dd>
+</dl>
+
+<!-- Los valores undefined, null e incluso el 0 son considerados como false -->
+<button
+  *ngIf="name !== 'Spiderman'"
+  (click)="changeHero()"
+  class="btn btn-primary mx-2">
+  Cambiar nombre
+</button>
+
+<button
+  *ngIf="age !== 25"
+  (click)="changeAge()"
+  class="btn btn-primary">
+  Cambiar edad
+</button>
+
+<button
+  (click)="resetForm()"
+  class="btn btn-primary mx-2">
+  Reset form
+</button>
