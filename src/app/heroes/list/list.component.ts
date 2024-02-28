@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   public heroNames: string[] = ['Spiderman', 'Ironman', 'Hulk', 'She Hulk','Thor'];
-  public deletedHero?: string; //Valor que  existe o no
+  public deletedHero?: string; //Valor que existe o no
 
   removeLastHero(): void{
     //Elimina el último elemento del array y regresa el nuevo arreglo, su contraparte es el shift
