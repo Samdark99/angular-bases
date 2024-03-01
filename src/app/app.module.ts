@@ -2,21 +2,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 //2. Librería de 3ros o Modules
-import { CounterModule } from './counter/counter.module';
-//3. Nuestro código
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+//3. Nuestro código
+import { CounterModule } from './counter/counter.module';
+import { DbzModule } from './dbz/dbz.module';
 import { HeroesModule } from './heroes/heroes.module';
+
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
-  imports: [ //CUALQUIER module va en los imports
+  imports: [ //CUALQUIER Module va en los imports
     BrowserModule,
     AppRoutingModule,
     CounterModule,
-    HeroesModule
+    HeroesModule,
+    DbzModule
   ],
   providers: [],
   bootstrap: [AppComponent]

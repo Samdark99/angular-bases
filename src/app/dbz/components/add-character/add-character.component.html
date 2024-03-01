@@ -1,0 +1,24 @@
+<h4>Agregar personaje</h4>
+
+<form class="row" (ngSubmit)="emitCharacter()">
+  <!-- El [()] da a entender que se asocia un evento y un atributo al mismo tiempo, se le conoce como "Banana in a Box" {Caja de Banana} -->
+  <!-- El name es el nombre de la propiedad de las propiedades de form -->
+  <input type="text"
+         [(ngModel)]="character.name"
+         name="name"
+         class="form-control mb-2"
+         placeholder="Nombre">
+
+  <input type="number"
+         [(ngModel)]="character.power"
+         name="power"
+         class="form-control mb-2"
+         placeholder="Poder">
+
+  <button type="submit" class="btn btn-primary">
+    Agregar
+  </button>
+
+  <!-- Este pipe hace que sea posible imprimir un objecrt en html -->
+  <!-- <pre>{{character | json}}</pre> -->
+</form>
